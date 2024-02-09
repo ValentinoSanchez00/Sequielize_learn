@@ -6,9 +6,14 @@ const getallfilms= async(req, res) => {
    res.json(allFilms)
  
 }
+const createAllfilms=async(req,res)=>{
+const createFilm=await filmService.createFilm(req.body)
+res.json(createFilm)
+}
 
 
 module.exports={
     getallfilms,
+    createAllfilms
  
 }

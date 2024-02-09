@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor escucahndo en puerto ${PORT} 😎`)
     sequelize
-    .sync({force:false})
+    .sync({force:true})
     .then(() => console.log("Conexion a la base de datos peliculas conectada con exito 👌👌"))
     .catch((error) =>console.log("Error: "+error+"✖✖") )
 })

@@ -12,7 +12,10 @@ id:{
 title:{
     type: DataTypes.STRING,
     allowNull: false, 
-    unique:true, 
+    unique:{
+       agrs:true,
+       msg:"Ya existe"
+    }, 
     validate:{
         notEmpty:{
             msg:"El nombre es un campo obligatorio"
